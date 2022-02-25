@@ -1,0 +1,52 @@
+{
+    "name": "Instagram Telegram Unfollow bot",
+    "description": "Instagram Unfollow bot",
+    "logo": "fotoğraf linki",
+    "keywords": [
+        "instagram",
+        "telegram",
+        "unfollow",
+        "js",
+        "bot"
+    ],
+    "repository": "https://github.com/egiusta/InstagramUnfollowTg",
+    "success_url": "istediğiniz bir link",
+    "image": "heroku/python",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "env": {
+        "IG_USERNAME": {
+            "description": "Instagram Username",
+            "value": "",
+            "required": true
+        },
+        "IG_PASSWORD": {
+            "description": "Şifre.",
+            "value": "",
+            "required": true
+        },
+        "TELEGRAM_BOT_TOKEN": {
+            "description": "@BotFather alın",
+            "value": "",
+            "required": true
+        },
+        "TELEGRAM_POST_WAIT_TIME": {
+            "description": "bekleme saniyesi."
+            "value": "5000",
+            "required": true
+                }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        },
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
+        
